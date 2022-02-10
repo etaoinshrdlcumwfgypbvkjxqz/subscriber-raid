@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RulePackDef>
+		<defName>NamerFactionSubscribers</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Subscribers</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="SubscriberBase" ParentName="MercenaryEliteBase" Abstract="True">
+		<nameMaker>NamerPersonSubscriber</nameMaker>
+		<initialResistanceRange>0~0</initialResistanceRange>
+	</PawnKindDef>
+	<PawnKindDef ParentName="SubscriberBase">
+		<defName>Subscriber</defName>
+		<label>subscriber</label>
+	</PawnKindDef>
+	<PawnKindDef ParentName="SubscriberBase">
+		<defName>First_Subscriber</defName>
+		<label>first subscriber</label>
+		<factionLeader>true</factionLeader>
+	</PawnKindDef>
+</Defs>

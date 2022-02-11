@@ -22,13 +22,22 @@ namespace Polyipseity.SubscriberRaid {
 			}
 		}
 
+		[HarmonyPatch(typeof(IncidentWorker_RaidEnemy), "GetLetterLabel")]
+		private static class ReplaceLetterLabel {
+			private static void Postfix(ref string __result, IncidentParms parms) {
+				if (parms.faction.def == ModDefOf.FactionDefOf.Subscribers) {
+					__result = $"{EarlyModStartup.NAMESPACE}.RaidEnemySubscriber_LetterLabel"
+						.Translate(parms.faction.def.pawnsPlural, EarlyModStartup.INSTANCE.settings.numberOfSubscriber);
+				}
+			}
+		}
+
 		[HarmonyPatch(typeof(IncidentWorker_RaidEnemy), "GetLetterText")]
 		private static class ReplaceLetterText {
 			private static void Postfix(ref string __result, IncidentParms parms) {
 				if (parms.faction.def == ModDefOf.FactionDefOf.Subscribers) {
 					__result = $"{EarlyModStartup.NAMESPACE}.RaidEnemySubscriber_LetterText"
-						.Translate(parms.faction.def.pawnsPlural, parms.faction.Name.ApplyTag(parms.faction), EarlyModStartup.INSTANCE.settings.numberOfSubscriber)
-						.CapitalizeFirst();
+						.Translate(parms.faction.def.pawnsPlural, parms.faction.Name.ApplyTag(parms.faction), EarlyModStartup.INSTANCE.settings.numberOfSubscriber);
 				}
 			}
 		}

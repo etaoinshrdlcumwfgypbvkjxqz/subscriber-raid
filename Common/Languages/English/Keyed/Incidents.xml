@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+	<Polyipseity.SubscriberRaid.RaidEnemySubscriber_LetterLabel>Celebration: {1} {0}</Polyipseity.SubscriberRaid.RaidEnemySubscriber_LetterLabel>
 	<Polyipseity.SubscriberRaid.RaidEnemySubscriber_LetterText>To celebrate reaching {2} subscribers, {2} {0} from {1} have arrived nearby to maim you!
 
-Run for your life!!!</Polyipseity.SubscriberRaid.RaidEnemySubscriber_LetterText>
+Run for your life NOW!!!</Polyipseity.SubscriberRaid.RaidEnemySubscriber_LetterText>
 </LanguageData>
